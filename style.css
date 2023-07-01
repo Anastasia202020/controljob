@@ -72,9 +72,12 @@ a {
 }
 .call {
 	color: #000;
-	display: block;
+	display: flex;
 	padding-left: 63px;
     padding-top: 56px;
+}
+.call_back {
+	margin-right: 5px;
 }
 .menu__item {
 	padding-right: 30px;
