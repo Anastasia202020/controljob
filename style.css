@@ -561,7 +561,6 @@ h3 {
 .website__content {
 	position: relative;
 	max-width: 1232px;
-	max-height: 432px;
 	background-color: #F7FAFE;
 	border-radius: 16px;
 	padding: 80px 90px 88px 118px;
@@ -569,7 +568,7 @@ h3 {
 	margin: 0 auto;
 }
 .website__title {
-	width: 1024px;
+	max-width: 1024px;
 	font-size: 64px;
 	line-height: 88px;
 	padding-bottom: 40px;
@@ -601,12 +600,12 @@ h3 {
 	display: block;
 	position: absolute;
 	margin-left: 315px;
-	margin-top: -374px;
+	top: 0;
 }
 .triangle-2 {
 	display: block;
 	position: absolute;
-	margin-left: 1050px;
+	right: 0;
 	margin-top: -50px;
 }
 /* Footer */
@@ -647,32 +646,100 @@ h3 {
 /* media */
 /* Large: 992px - 1199px */
 @media (max-width: 1199px) {
-	section {
+	body {
 		max-width: 960px;
+		margin: 0 auto;
+	}
+	section {
 		padding-left: 0;
 	}
 	.hosting__top .top__right {
 		margin-top: 100px;
 	}
+	.offer_wrapper {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.menu__item_active {
+		display: none;
+	}
+	.hosting__top {
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.hosting__bottom {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.package__title {
+		margin-left: 150px;
+	}
+	.content__stories {
+		flex-direction: column;
+		align-items: center;
+	}
+	.bottom__stories {
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+	}
 }
 
-/* Medium: 768px - 991px
+/* 
+Medium: 768px - 991px */
 @media (max-width: 991px) {
-	.container {
+	body {
 		max-width: 720px;
+		margin: 0 auto;
+	}
+	.menu__list {
+		display: none;
+	}
+	.plan__boxes {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+	}
+	.package__title {
+		max-width: 720px;
+		margin-left: 0;
+	}
+	.footer__content {
+		flex-wrap: wrap;
+		gap: 37px;
+	}
+	.footer__bottom {
+		margin-top: 20px;
+	}
+	.footer__first-part {
+		display: none;
 	}
 }
 
 /* Small: 576px - 767px */
-/* @media (max-width: 767px) {
-	.container {
+@media (max-width: 767px) {
+	body {
 		max-width: 540px;
+		margin: 0 auto;
 	}
-} */
+	.offer_wrapper_right {
+		margin-left: 0;
+	}
+	.hosting__top .top__right {
+		margin-top: 0;
+	}
+	.hosting__top .top__img {
+		gap: 60px;
+	}
+	.hosting__top .bottom__img_g {
+		gap: 30px;
+	}
+}
 
 /* Extra small: 0px (320px) - 575px */
-/* @media (max-width: 575px) {
-	.container {
+@media (max-width: 575px) {
+	body {
 		padding: 0 15px;
 	}
-} */ */
+} 
